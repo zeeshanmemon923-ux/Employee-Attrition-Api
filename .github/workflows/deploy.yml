@@ -24,6 +24,7 @@ jobs:
 
       - name: Run tests
         run: |
+          python app/train_model.py
           python -c "import pickle; model = pickle.load(open('app/model.pkl','rb')); print('Model loaded successfully ✅')"
 
       - name: Push to HuggingFace Spaces
